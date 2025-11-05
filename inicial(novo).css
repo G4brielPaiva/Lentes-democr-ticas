@@ -1,144 +1,607 @@
-    <!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lentes Democráticas- Início</title>
-    <link rel="stylesheet" href="inicial(novo).css">
-    <link rel="icon" href="logo lentes.ico">
-</head>
-<body>
-     <!--Cabeçalho com a logo-->
-    <div class="cabecalho-header-container">
-    <header>
-            <nav>
-                <span class="logo">Lentes Democráticas</span>
-                <img class="logo-lentes" src ="assets/logo lentes.jpg" alt="logo site">
-                <ul class="menu">
-                    <li><a href="inicial.html">Início</a></li>
-                    <li><a href="fotos.html">Fotos</a></li> 
-                    <li><a href="ia.html">Uso consciente da IA</a></li>
-                    <li><a href="sobre.html">Sobre o Site</a></li>
-                    <li><a href="faq.html">FAQ</a></li>
-                    <li><a href="orçamento.html">Orçamento</a></li>
-                </ul>
-            </nav>
-        </header>
-    </div><!--cabecalho-header-container-->
+/*Estilização geral-----------------------------------------------------------------------------*/
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:wght@400;600&family=Roboto:ital,wght@0,100..900;1,100..900&family=Teko:wght@300..700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-family: Inter, sans-serif;
+    font-weight: 500;
+}
+
+body {
+    background: #fff;
+    color:rgb(126, 4, 4);
+}
+
+a {
+    text-decoration: none;
+    color: rgb(126, 4, 4);
+}
+
+li:hover {
+    transform: scale(1.06);
+    transition: 0.07s;
+}
+
+ul {
+    list-style: none;
+}
+
+nav {
+    max-width: 1400;
+    margin: auto;
+    padding: 1.5rem 10rem;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.logo {
+    font-family: Teko;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-right: 20px;
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+}
+
+.chatgpt {
+    font-weight: 600;
+    color: rgb(126, 4, 4);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
     
-    <main>
-        <div class="principal">
-            <section class="hero">
-                <header class="hero-conteudo">
-                    <span class="destaque marrom">Bem vindos!</span>
-                    <h1>Lentes democráticas</h1>
-                    <hr/>
-                    <h2 class="hero-subtitulo">A história pela lente e o poder</h2>
-                </header>
-                <div class="hero-imagens-container">
-                    <figure><a href="fotos.html"><img src="assets/14bis.jpg" alt="14 bis"></a></figure>
-                    <figure><a href="fotos.html"><img src="assets/constituição 88.jpg" alt="constituição"></a></figure>
-                    <figure><a href="fotos.html"><img src="assets/crise.jpg" alt="crise"></a></figure>
-                    <figure><a href="fotos.html"><img src="assets/ditadura militar.jpg" alt="ditadura"></a></figure>
-                    <figure><a href="fotos.html"><img src="assets/grito do ipiranga bahia.jpg" alt="grito"></a></figure>
-                    <figure><a href="fotos.html"><img src="assets/invasão.jpeg" alt="invasao"></a></figure>
-                    <figure><a href="fotos.html"><img src="assets/masp.jpg" alt="masp"></a></figure>
-                    <figure><a href="fotos.html"><img src="assets/movimento artístisco.jpg" alt="movimento"></a></figure>
-                    <figure><a href="fotos.html"><img src="assets/ouro preto.jpg" alt="ouro preto"></a></figure>
-                    <figure><a href="fotos.html"><img src="assets/república.jpg" alt="republica"></a></figure>
-                    <figure><a href="fotos.html"><img src="assets/abolição 2025.jpg" alt="abolicao"></a></figure>
-                    <figure><a href="fotos.html"><img src="assets/tratado-da-triplice.jpg" alt="tratado-da-triplice"></a></figure>
-                </div>
-            </section>
-        </div>
+    padding: 2rem;
+}
 
-        <section class="botao-container">
-            <button type="button">
-                <a href="#prompt-container-id">
-                ⇩
-                </a>
-            </button>
-        </section>
+/*footer*/
+footer {
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
 
-        
-        <div id="prompt-container-id">
-        <section class="prompts-container">
-            <header class="prompts-container-cabecalho">
-                <span class="destaque marrom">
-                    prompts
-                </span>
+    background: rgb(126, 4, 4);
+    color: #fff;
 
-                <h2 class="prompts-container-titulo">
-                    Confira os prompts!
-                </h2>
-                <p class="prompts-container-subtitulo">
-                    Dê uma olhada nos prompts que usamos para gerar as imagens
-                </p>
-            </header>
+    margin-bottom: 0;
+}
 
-            <div class="prompts-card-container">
-                <div class="prompts-card">
-                    <header class="prompts-card-cabecalho">
-                        <div class ="prompts-card-cabecalho-detalhe">
-                            <span class="destaque amarelo">#1</span>
-                            <h3 class="prompts-titulo">Sua vez!</h3>
-                        </div>
+.footer-nav {
+    font-family: Inter;
+    font-size: 1rem;
+    font-weight: 400;
+}
 
-                        <p class="prompts-nome-imagem">[ ◉¯]</p>
-                    </header>
-                    <p class="prompt-descricao">Deixe sua imaginação dominar você!! digite algumas ideias de imagem para que possamos transformar para você, o que você gostaria de ver??</p>
-                    <div class="form-prompt">
-                    <fieldset>
-                        <section class="forms">
-                        <h2>Deixe sua ideia de prompt</h2>
-                        <form action="#" method="POST">
-                            
+.footer-copy {
+    font-family: Inter;
+    font-size: 1rem;
+    font-weight: 400;
+}
 
-                            <label for="nome">Nome Completo:</label>
-                            <input type="text" id="nome" name="nome" required>
+/*Página inicial--------------------------------------------------------------------------*/
+.cabecalho-header-container {
+    width: 1500px;
+}
 
-                            <label for="email">E-mail para Contato:</label>
-                            <input type="email" id="email" name="email" required>
+.principal {
+    background: rgb(126, 4, 4);
+}
 
-                            <label for="telefone">Telefone (DDD + Número):</label>
-                            <input type="tel" id="telefone" name="telefone" required>
+.logo-lentes{
+    width: auto;
+    height: 80px;
+    margin-right: 40px;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 50px;
+    align-items: start;
+    overflow: clip;
+}
+.hero {
 
-                            <label for="ideia">Qual sua ideia?</label>
-                            <input type="text" id="ideia" name="ideia" required>
-                            
-                            <label for="permissao">Você permite que seu nome seja divulgado?</label>
-                            
-                                <div class="sim">
-                                    <input type="radio" id="sim" name="sim" value="sim">
-                                    <label for="html">Sim</label><br>
-                                </div>
-                                <div class="nao">
-                                    <input type="radio" id="não" name="não" value="não">
-                                    <label for="não">Não</label>
-                                </div> 
-                           
-                            <div class="botao-div"><button type="submit" class="botao">Enviar</button></div>
-                        </form>
-                    </section>
-                    </fieldset>
-                    </div>
-                    <div class="prompt-author">
-                        <img src="assets/Gemini_Generated_Image_ejr1oyejr1oyejr1-removebg-preview-removebg-preview (1).png" alt=""/>
-                        <span class="nome-author-prompts">nome integrante</span>
-                    </div>
-                </div>
+    max-width: 1120px;
+    height: 60vh;
 
-                
-            </div>
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 6rem;
 
+    padding: 0rem 2rem;
+    margin: auto;
+
+    overflow: clip;
+
+    color: #fff;
+}
+
+.hero-conteudo {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.destaque {
+    font-family: Epilogue;
+    font-size: 1rem;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.marrom {
+    color: #A45A49;
+}
+
+h1 {
+    font-family: Montserrat;
+    font-size: 3.5rem;
+    font-weight: 800;
+}
+
+hr {
+    border-color: rgb(167, 9, 9);
+}
+
+.hero-subtitulo {
+    color: #fff;
+    font-family: Inter;
+    font-size: 1.5rem ;
+    font-weight: 400;
+}
+
+.hero-imagens-container {
+    max-width: 60%;
+    column-count: 3;
+    column-gap: 2rem;
+    margin: -1rem;
+}
+
+.hero-imagens-container > figure > a, img {
+    width: 100%;
+    border-radius: 0.5rem;
+}
+
+.hero-imagens-container > figure > a, img:hover {
+    transform: scale(1.5);
+    transition: 0.05s;
+}
+
+.botao-container {
+    width: 100%;
+    max-width: 1120px;
+    margin: auto;
+    transform: translate("0, 150%"s);
+}
+
+button {
+    border: none;
+    padding: 1rem;
+    border-radius: 0.5rem;
+
+    background: rgb(243, 80, 80);
+
+    position: absolute;
+}
+
+.prompts-container {
+    display: flex;
+    flex-direction: column;
+
+    max-width: 1120px;
+    padding:3rem 2rem;
+    margin: auto;
+}
+
+.mud {
+    display: flex;
+    flex-direction: column;
+    column-count: 2;
+    flex-wrap: wrap;
+}
+
+.prompts-container-cabecalho {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 2rem;
+    align-items: center;
+}
+
+.prompts-container-titulo {
+    font-family: Montserrat;
+    font-weight: 700;
+    color: rgb(126, 4, 4);
+}
+
+.prompts-container-subtitulo {
+    font-family: Inter;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.prompts-card-container {
+    padding: 0rem 10rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+
+    align-self: center;
+}
+
+.prompts-card {
+    color: #fff;
+    background: rgb(71, 2, 2);
+    padding: 2rem;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    flex-basis: 29rem;
+    margin-top: 2rem;
+
+    
+}
+
+.prompts-card-cabecalho {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: end;
+}
+
+.prompts-card-cabecalho-detalhe {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.amarelo {
+    color: #E7A80E;
+}
+
+.prompts-titulo {
+    color: rgb(240, 44, 44);
+    font-family: Montserrat;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.prompts-nome-imagem {
+    color: rgb(156, 62, 62);
+    font-family: Inter;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.prompt-descricao {
+    font-family: Inter;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    line-height: 50px;
+
+    width: 700px;
+
+    flex-wrap: nowrap;
+}
+
+.forms {
+    display: flex;
+    flex-direction: column;
+    line-height: 50px;
+
+    padding: 1rem;
+
+    width: 700px;
+    height: 75vh;
+
+    flex-wrap: nowrap;
+}
+
+.sim, .nao {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+
+    width: 9px;
+}
+
+.botao-div {
+    display: flex;
+    flex-direction: row;
+    justify-items: end;
+}
+
+.botao {
+    padding: 1rem;
+
+    color: #fff;
+}
+
+.botao:active{
+    transform: translateY(3px);
+}
+
+.prompt-author {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.prompt-author > img{
+    border-radius: 20rem;
+    width: 1.5rem;
+}
+
+.nome-author-prompts {
+    font-family: Inter;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+/*Final da pagina inicial --------------------------------------------------------------------------*/
+
+/*Fotos ---------------------------------------------------------------------------------------------*/
+
+.galeria {
+    display: flex;
+    flex-direction: column;
+    max-width: 1120px;
+    margin: auto;
+    text-align: justify;
+    padding: 1rem;
+
+    position:sticky;
+
+    height: 100%;
+}
+
+.galeria-titulo {
+    font-family: Roboto;
+    font-size: 3.5rem;
+    font-weight: 800;
+}
+
+.card-container-fotos {
+   max-width: 1120px;
+
+    display: flex;
+    flex-direction: row;
+    column-count: 3;
+    justify-content: space-between;
+    align-items: center;
+    gap: 6rem;
+
+    padding: 2rem 2rem;
+
+    flex-wrap: wrap;
+
+    height: 100%
+}
+
+.card-fotos {
+    color: #fff;
+    border-radius: 2.5rem;
+    background: rgb(71, 2, 2);
+    width: 380px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:0.5rem;
+
+    padding: 1rem;
+    height:6rem;
+
+    height: auto;
+}
+
+.card-fotos > img, a>img{
+    width: 9.5rem;
+    border-radius: 20%;
+}
+
+.card-fotos > p{
+    margin-top: 1rem;
+}
+
+/*uso consciente da ia*/
+
+
+
+/*final uso consciente da ia*/
+
+/*Orçamento-------------------------------------------------------------------------------------*/
+.titulo {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: auto;
+}
+
+.titulo > h1 {
+    font-family: Montserrat;
+    font-size: 3.5rem;
+    font-weight: 800;
+}
+
+.main-content {
+    max-width: 1120px;
+    margin: auto;
+}
+
+/* 4. Conteúdo Principal (Main) - ALTERADO */
+.container1 {
+    padding: 1rem ; /* Mais padding interno */
+    border-radius: 1.5rem; /* Mais arredondado */
+    border: 1px solid #e5e7eb; /* Borda sutil */
+    box-shadow: 0 15px 30px -5px rgba(0, 0, 0, 0.1), 0 5px 10px -5px rgba(0, 0, 0, 0.05); /* Sombra mais suave e elevada */
+    margin-top: 2rem; /* Mais margem superior */
+}
+
+.explica {
+    display: flex;
+    flex-direction: column; /* Padrão: coluna para mobile */
+    gap: 3rem; /* Aumentar o espaçamento */
+    align-items: flex-start; /* Alinha o conteúdo à esquerda */
+}
+
+.Explicacao {
+    width: 100%;
+    text-align: justify;
+}
+
+.Explicacao  h2 {
+    font-size: 2rem; /* Título maior */
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 4px solid var(--cor-secundaria); /* Linha de separação mais grossa e colorida */
+    line-height: 1.2;
+}
+
+.text-content  p {
+    margin-bottom: 1.25rem; /* Mais espaço entre parágrafos */
+    color: #4b5563;
+    font-size: 1rem;
+}
+
+.text-content  strong {
+    font-weight: 700;
+    color: var(--cor-primaria); /* Destacar negritos */
+}
+
+.explica > div:last-child {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.explica img {
+    width: 100%;
+    max-width: 24rem; /* Um pouco maior que o original */
+    height: auto;
+    border-radius: 1.5rem; /* Mais arredondado */
+    transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94); /* Efeito de transição mais agradável */
+    object-fit:cover;
+    border-radius: 50%;
+}
+
+.explica > img:hover {
+    transform: scale(1.05); /* Efeito hover mais pronunciado */
+}
+
+.Explicacao {
+    width: 65%; /* Ajuste a largura do texto */
+}
+
+.explica > div:last-child { 
+    width: 35%; /* Ajuste a largura da imagem */
+    padding-top: 1rem; /* Alinhar melhor a imagem ao título */
+}
             
-        </section>
-        </div>
-    </main>
+.container1 {
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+}
 
-    <footer>
-        <p class="footer-nav">Navegue pelos menus acima para acessar nossas seções de conteúdo aprofundado.</p>
-        <p class="footer-copy">&copy; 2025 Lentes Democráticas. Todos os direitos reservados.</p>
-    </footer>
-</body>
-</html>
+@media (min-width: 768px) {
+    .explica {
+        /* imagem à esquerda. */
+        flex-direction: row-reverse; 
+        align-items: flex-start;
+        gap: 3rem;
+    }
+
+    .explica img {
+        max-width: 45%;
+        height: auto;
+    }
+
+    .Explicacao {
+        width: 55%;
+    }
+}
+/*final orçamento-------------------------------------------------------------------------------*/
+
+/*Sobre o site estilização*/
+.conteudo-secao1 {
+    display: flex;
+    flex-direction: column;
+
+    gap: 2rem;
+
+    max-width: 1120px;
+    margin:auto;
+
+    place-items: center;
+    text-align: center;
+}
+
+.conteudo-part1-titulo {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+
+.conteudo-secao1 > header > h1 {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-family: Montserrat;
+    color: #E7A80E;
+}
+
+.conteudo-secao1 > header > h2 {
+    font-weight: 400;
+    font-family: Montserrat;
+}
+
+.conteudo-part1-proposta {
+    display: flex;
+    flex-direction: column;
+
+    text-align: justify;
+
+    width: 900px;
+
+    line-height: 1.5rem;
+
+    gap: 1rem;
+    
+}
+
+.conteudo-part1-proposta > h3 {
+    font-size: 2rem;
+}
+.conteudo-part1-proposta > hr {
+    width: 200px;
+}
+
+/*Abolição*/
